@@ -1,0 +1,109 @@
+{
+  "design": {
+    "source": "deterministic synthetic correlated Gaussian regression",
+    "seed": 20260927,
+    "n_replicates": 150,
+    "n_train": 700,
+    "n_test": 1000,
+    "target_missing_rate_per_masked_feature": 0.3,
+    "mechanisms": [
+      "mcar",
+      "mar",
+      "mnar"
+    ],
+    "methods": [
+      "oracle",
+      "median",
+      "median_indicator",
+      "iterative"
+    ]
+  },
+  "best_feasible_method_by_prediction_rmse": {
+    "mcar": {
+      "method": "iterative",
+      "prediction_rmse": 1.3981762683893684
+    },
+    "mar": {
+      "method": "iterative",
+      "prediction_rmse": 1.4226289742653533
+    },
+    "mnar": {
+      "method": "median_indicator",
+      "prediction_rmse": 1.449022721410664
+    }
+  },
+  "prediction_rmse": [
+    {
+      "mechanism": "mcar",
+      "method": "oracle",
+      "mean": 1.0020624725958245,
+      "mcse": 0.0019573836446815087
+    },
+    {
+      "mechanism": "mcar",
+      "method": "median",
+      "mean": 1.490209653632884,
+      "mcse": 0.0030609175176933225
+    },
+    {
+      "mechanism": "mcar",
+      "method": "median_indicator",
+      "mean": 1.4917826924693636,
+      "mcse": 0.0030056206770966826
+    },
+    {
+      "mechanism": "mcar",
+      "method": "iterative",
+      "mean": 1.3981762683893684,
+      "mcse": 0.0029533553180952285
+    },
+    {
+      "mechanism": "mar",
+      "method": "oracle",
+      "mean": 1.0020624725958245,
+      "mcse": 0.0019573836446815087
+    },
+    {
+      "mechanism": "mar",
+      "method": "median",
+      "mean": 1.5119030839808352,
+      "mcse": 0.0030214945255085555
+    },
+    {
+      "mechanism": "mar",
+      "method": "median_indicator",
+      "mean": 1.5081162077722792,
+      "mcse": 0.00305670415677803
+    },
+    {
+      "mechanism": "mar",
+      "method": "iterative",
+      "mean": 1.4226289742653533,
+      "mcse": 0.0029365736012201857
+    },
+    {
+      "mechanism": "mnar",
+      "method": "oracle",
+      "mean": 1.0020624725958245,
+      "mcse": 0.0019573836446815087
+    },
+    {
+      "mechanism": "mnar",
+      "method": "median",
+      "mean": 1.587080154335955,
+      "mcse": 0.00303869600862555
+    },
+    {
+      "mechanism": "mnar",
+      "method": "median_indicator",
+      "mean": 1.449022721410664,
+      "mcse": 0.0029654178629654098
+    },
+    {
+      "mechanism": "mnar",
+      "method": "iterative",
+      "mean": 1.4734387808047147,
+      "mcse": 0.003081461576431163
+    }
+  ]
+}
